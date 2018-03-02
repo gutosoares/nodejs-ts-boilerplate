@@ -50,7 +50,7 @@ server.use(helmet());
 (<any>mongoose).Promise = global.Promise;
 mongoose
   .connect(config.mongoDB, { useMongoClient: true })
-  .then(() => console.log('Conected on MongoDB'), err => console.log(err));
+  .then(() => console.error('Conected on MongoDB'), err => console.error(err));
 
 /**
  * Some libs an configs, can run only in development mode.
