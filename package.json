@@ -1,34 +1,30 @@
 {
-  "name": "nodejs-ts",
+  "name": "realty-api",
   "version": "1.0.0",
-  "description": "A simple boilerplate for NodeJS using Typescript projects",
+  "description": "A simple realty RESTful API build in NodeJS and Typescript",
   "main": "index.js",
   "license": "MIT",
   "author": {
-    "name": "Emerson Luiz",
-    "email": "eluizbr@gmail.com",
-    "url": "https://github.com/eluizbr"
+    "name": "Augusto Soares",
+    "email": "gutosoares@outlook.com",
+    "url": "https://github.com/gutosoares"
   },
   "engines": {
     "node": "^8.9.1",
     "npm": "5.5.1"
   },
   "scripts": {
-    "heroku-prebuild":
-      "npm install --only=dev && node_modules/.bin/tsc -p . && npm run makeDevDoc",
+    "heroku-prebuild": "npm install --only=dev && node_modules/.bin/tsc -p . && npm run makeDevDoc",
     "dev": "export NODE_ENV='devel' && nodemon --exec ts-node src/index.ts",
-    "prod":
-      "export NODE_ENV='production' && nodemon --exec ts-node src/index.ts",
+    "prod": "export NODE_ENV='production' && nodemon --exec ts-node src/index.ts",
     "build": "tsc -p . && apidoc -i src -o build/public/doc",
     "buildTest": "tsc -p .",
     "makeDoc": "node_modules/.bin/apidoc -i src -o src/public/doc",
     "copyApp": "cd src/public && cp -rfv app ../../build/public",
-    "makeDevDoc":
-      "node_modules/.bin/apidoc -i src -o build/public/doc && npm run copyApp && ls -lisa build/public/",
+    "makeDevDoc": "node_modules/.bin/apidoc -i src -o build/public/doc && npm run copyApp && ls -lisa build/public/",
     "start": "node build/index.js",
     "test": "node_modules/.bin/mocha --opts src/test/mocha.opts",
-    "test:watch":
-      "export PORT='3001' NODE_ENV='devel' && node_modules/.bin/mocha --opts src/test/mocha.opts --watch"
+    "test:watch": "export PORT='3001' NODE_ENV='devel' && node_modules/.bin/mocha --opts src/test/mocha.opts --watch"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.1",
