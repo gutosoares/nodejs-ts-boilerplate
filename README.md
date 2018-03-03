@@ -8,33 +8,68 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You need to install
 
 ```
-Give examples
+Mongodb
 ```
+
+```
+node
+```
+
+for run this project.
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+First, you need to clone this repository and install all dependencies, using the first command below.
 
 ```
-Give the example
+npm i
 ```
 
-And repeat
+And start the server in dev mode.
 
 ```
-until finished
+npm run dev
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+All endpoint for this RESTful api
+
+
+```
+[GET]http://localhost:3000/api/v1/realties => Get all realties registered in the database
+```
+
+```
+[GET]http://localhost:3000/api/v1/realties/:id => Get a single realty registred in the database using id
+```
+
+```
+[POST]http://localhost:3000/api/v1/realties => Save a new realty on database system
+```
+
+```
+[PATCH]http://localhost:3000/api/v1/realties/update/:id => Edit a single realty registred in the database using id
+```
+
+```
+[DELETE]http://localhost:3000/api/v1/realties/:id => Remove a single realty on database system
+```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+For see all test working, run this command below
+
+```
+npm run test
+```
+
+or
+
+```
+npm run test:watch
+```
 
 ### Break down into end to end tests
 
@@ -58,9 +93,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Node.js](https://nodejs.org/en/) - The web framework used
+* [Typescript](https://typescriptlang.org) - Javascript super set
+* [MongoDB](https://www.mongodb.com/) - NoSQL database
 
 ## Contributing
 
@@ -68,20 +103,12 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Augusto Soares**
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
