@@ -1,11 +1,11 @@
 import { Application } from 'express';
 
-import UsersRoutes from './modules/users/routes/index';
+import RealtiesRoutes from './modules/realties/routes';
 
 const urlBase = '/api/v1';
 
 const allRoutes = (server: Application) => {
-  server.use(`${urlBase}/users`, UsersRoutes);
+  server.use(`${urlBase}/realties`, RealtiesRoutes);
 
   // Default route errorhandler
   server.use(function(req, res, next) {
