@@ -8,7 +8,7 @@ const allRoutes = (server: Application) => {
   server.use(`${urlBase}/realties`, RealtiesRoutes);
 
   // Default route errorhandler
-  server.use(function(req, res, next) {
+  server.use((req, res, next) => {
     res.status(500).json({
       status: 500,
       msg: `Error on route. This route exist?`,
