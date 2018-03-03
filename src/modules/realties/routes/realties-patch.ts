@@ -1,7 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import { RealtySchema } from '../models/realty-schema';
 
-export const updateRealty = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
+export const updateRealty = async (req: Request, res: Response): Promise<any> => {
   try {
     const update = { $set: req.body };
     const options = { new: true };
@@ -19,5 +19,4 @@ export const updateRealty = async (req: Request, res: Response, next: NextFuncti
       message: error.message
     });
   }
-  next();
 };

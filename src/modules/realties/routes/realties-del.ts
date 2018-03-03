@@ -1,7 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import { RealtySchema } from '../models/realty-schema'
 
-export const deleteRealty = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
+export const deleteRealty = async (req: Request, res: Response): Promise<any> => {
   try {
     const { id } = req.params;
     const realty = await RealtySchema.findByIdAndRemove({ _id: id });
@@ -18,5 +18,4 @@ export const deleteRealty = async (req: Request, res: Response, next: NextFuncti
       message: error.message
     });
   }
-  next();
 };

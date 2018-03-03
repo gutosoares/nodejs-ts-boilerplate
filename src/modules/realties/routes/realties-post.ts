@@ -1,7 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import { RealtySchema } from '../models/realty-schema';
 
-export const createRealty = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
+export const createRealty = async (req: Request, res: Response): Promise<any> => {
   try {
     const realties = await new RealtySchema(req.body).save();
 
@@ -12,5 +12,4 @@ export const createRealty = async (req: Request, res: Response, next: NextFuncti
   } catch (error) {
     return res.status(400).json((error.message, 400));
   }
-  next();
 };
