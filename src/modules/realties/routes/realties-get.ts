@@ -8,7 +8,7 @@ export const getAllRealties = async (req: Request, res: Response, next: NextFunc
 
     res.status(200).json({
       status: 200,
-      message: "Realties successfully loaded!",
+      message: 'Realties successfully loaded!',
       data: realties
     });
   } catch (error) {
@@ -28,7 +28,7 @@ export const getSingleRealty = async (req: Request, res: Response, next: NextFun
 
     res.status(200).json({
       status: 200,
-      message: "Realty successfully loaded!",
+      message: 'Realty successfully loaded!',
       data: realty
     });
   } catch (error) {
