@@ -106,11 +106,13 @@ allRoutes(server);
  * Run server on setted port
  * Show wich mode is running
  */
-server.listen(PORT, () => {
-  console.log(
-    `Server running on port ${PORT} in ${process.env.NODE_ENV} mode.`
-  );
-});
+if(!module.parent) {
+  server.listen(PORT, () => {
+    console.log(
+      `Server running on port ${PORT} in ${process.env.NODE_ENV} mode.`
+    );
+  });
+}
 
 /**
  * Export `express instance` for use in tests environment

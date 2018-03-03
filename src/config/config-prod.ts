@@ -1,5 +1,5 @@
 export = {
-  mongoDB: 'mongodb://localhost/realtydb',
+  mongoDB: '',
   jwtSecret: '',
   modalTimer: 5000
 };
