@@ -10,13 +10,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need to install
 
-```
-Mongodb
-```
-
-```
-node
-```
+- Mongodb
+- node
+- typescript
 
 for run this project.
 
@@ -35,7 +31,6 @@ npm run dev
 ```
 
 All endpoint for this RESTful api
-
 
 ```
 [GET]http://localhost:3000/api/v1/realties => Get all realties registered in the database
@@ -89,25 +84,22 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+The deploy of the project was done in [Heroku](https://heroku.com) and can be accessed by this [url](https://node-restfulapi.herokuapp.com/).
 
+URL for this project in production.
+```
+https://node-restfulapi.herokuapp.com/
+```
 ## Built With
 
 * [Node.js](https://nodejs.org/en/) - The web framework used
 * [Typescript](https://typescriptlang.org) - Javascript super set
 * [MongoDB](https://www.mongodb.com/) - NoSQL database
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
 ## Authors
 
 * **Augusto Soares**
+* base on [eluizbr](https://github.com/eluizbr/nodejs-ts-boilerplate) nodejs ts boilerplate.
 
 ## License
 
