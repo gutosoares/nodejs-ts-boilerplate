@@ -32,9 +32,9 @@ server.use(BodyParser.json());
 server.use(cors());
 
 // Sessions
-server.use(
-  session({ secret: config.jwtSecret, resave: true, saveUninitialized: true })
-);
+// server.use(
+//   session({ secret: config.jwtSecret, resave: true, saveUninitialized: true })
+// );
 
 // PassportJS
 server.use(passport.initialize());
@@ -106,13 +106,12 @@ allRoutes(server);
  * Run server on setted port
  * Show wich mode is running
  */
-if(!module.parent) {
-  server.listen(PORT, () => {
-    console.log(
-      `Server running on port ${PORT} in ${process.env.NODE_ENV} mode.`
-    );
-  });
-}
+
+server.listen(PORT, () => {
+  console.log(
+    `Server running on port ${PORT} in ${process.env.NODE_ENV} mode.`
+  );
+});
 
 /**
  * Export `express instance` for use in tests environment

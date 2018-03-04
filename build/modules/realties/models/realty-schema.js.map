@@ -1,0 +1,1 @@
+{"version":3,"file":"realty-schema.js","sourceRoot":"","sources":["../../../../src/modules/realties/models/realty-schema.ts"],"names":[],"mappings":";;AAAA,qCAAqC;AACrC,iDAAoC;AAEpC,MAAM,MAAM,GAAG,QAAQ,CAAC,MAAM,CAAC;AAE/B,MAAM,MAAM,GAAG,IAAI,MAAM,CAAC,sBAAM,EAAE,EAAE,UAAU,EAAE,IAAI,EAAE,CAAC,CAAC;AAE3C,QAAA,YAAY,GAAG,QAAQ,CAAC,KAAK,CAAC,UAAU,EAAE,MAAM,CAAC,CAAC"}

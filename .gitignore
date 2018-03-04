@@ -58,5 +58,3 @@ yarn.lock
 # dotenv environment variables file
 .env
 
-# build production folder
-build
