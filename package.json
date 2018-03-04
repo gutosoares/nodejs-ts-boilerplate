@@ -17,7 +17,7 @@
     "start": "node build/index.js",
     "dev": "export NODE_ENV='devel' && nodemon --exec ts-node src/index.ts",
     "prod": "export NODE_ENV='production' && nodemon --exec ts-node src/index.ts",
-    "heroku-prebuild": "npm install --only=dev && node_modules/.bin/tsc -p . && npm run makeDevDoc",
+    "heroku-prebuild": "npm install --only=dev && node_modules/.bin/tsc -p .",
     "build": "tsc -p . && apidoc -i src -o build/public/doc",
     "buildTest": "tsc -p .",
     "makeDoc": "node_modules/.bin/apidoc -i src -o src/public/doc",

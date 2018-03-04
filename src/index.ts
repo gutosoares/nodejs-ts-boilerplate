@@ -32,9 +32,9 @@ server.use(BodyParser.json());
 server.use(cors());
 
 // Sessions
-// server.use(
-//   session({ secret: config.jwtSecret, resave: true, saveUninitialized: true })
-// );
+server.use(
+  session({ secret: config.jwtSecret, resave: true, saveUninitialized: true })
+);
 
 // PassportJS
 server.use(passport.initialize());

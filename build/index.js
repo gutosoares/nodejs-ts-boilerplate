@@ -4,6 +4,7 @@ const BodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
 const jwt = require("express-jwt");
+const session = require("express-session");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
 const passport = require("passport");
@@ -26,9 +27,7 @@ server.use(BodyParser.json());
  */
 server.use(cors());
 // Sessions
-// server.use(
-//   session({ secret: config.jwtSecret, resave: true, saveUninitialized: true })
-// );
+server.use(session({ secret: config.jwtSecret, resave: true, saveUninitialized: true }));
 // PassportJS
 server.use(passport.initialize());
 server.use(passport.session());
