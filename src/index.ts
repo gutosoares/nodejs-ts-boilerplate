@@ -32,9 +32,9 @@ server.use(BodyParser.json());
 server.use(cors());
 
 // Sessions
-server.use(
-  session({ secret: config.jwtSecret, resave: true, saveUninitialized: true })
-);
+// server.use(
+//   session({ secret: config.jwtSecret, resave: true, saveUninitialized: true })
+// );
 
 // PassportJS
 server.use(passport.initialize());
@@ -85,7 +85,7 @@ if (process.env.NODE_ENV !== 'production') {
    * Protect all routes.
    * Routes includes in `./config/unlessPath.ts` don't will be not protected.
    */
-  server.use(jwt({ secret: config.jwtSecret }).unless(unlessPath));
+  // server.use(jwt({ secret: config.jwtSecret }).unless(unlessPath));
 }
 
 // Default error
